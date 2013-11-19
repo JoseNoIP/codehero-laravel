@@ -17,3 +17,6 @@ Route::get('/', function()
 });
 
 Route::get('usuarios', array('uses' => 'UsuariosController@mostrarUsuarios'));
+Route::get('usuarios/nuevo', array('uses' => 'UsuariosController@nuevoUsuario'));
+Route::post('usuarios/crear', array('uses' => 'UsuariosController@crearUsuario')); //Ruta a la que apunta el formulario. Recibe peticiones 'POST'.
+Route::get('usuarios/{id}', array('uses' => 'UsuariosController@verUsuario')); //Recibe parámetro 'id' para buscar usuario.
